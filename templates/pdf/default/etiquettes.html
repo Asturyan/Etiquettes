@@ -1,0 +1,29 @@
+{literal}
+<style type="text/css">
+    <!--
+            table {
+                    border-collapse: collapse;
+                    width: 100%;
+            }
+
+            td {
+                    padding: 0.2mm;
+            }
+    -->
+    </style>
+{/literal}
+<page backtop="0" backleft="0" backright="0" backbottom="0">
+    <table>
+        {loop name="order.invoice" type="order" id=$order_id customer="*"}
+        {loop type="order_address" name="delivery_address" id=$DELIVERY_ADDRESS}
+        <tr><td>{$FIRSTNAME} {$LASTNAME}</td></tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td>{$ADDRESS1}</td></tr>
+        <tr><td>{$ADDRESS2}</td></tr>
+        <tr><td>{$ADDRESS3}</td></tr>
+        <tr><td>{$ZIPCODE} {$CITY}</td></tr>
+        <tr><td>{loop type="country" name="country_delivery" id=$COUNTRY}{$TITLE}{/loop}</td></tr>
+        {/loop}
+        {/loop}
+        </table>
+</page>

@@ -1,0 +1,6 @@
+<td class="text-center">
+	<div class="btn-group">
+		<span class="btn btn-default btn-xs"><input type="checkbox" name="etiquettescmd[]" value="{$ID}" autocomplete="off" {if $orderStatusLabel != "order_paid"}disabled="disabled"{/if} class="etiquettescheck" /></span>
+		<a class="btn btn-default btn-xs" title="{intl l='Generate'}" href="{url path="/admin/module/Etiquettes/generate?cmd=$ID"}"><span class="glyphicon glyphicon-cloud-download" style="padding: 2px 2px 8px;"></span></a>
+	</div>
+</td>
